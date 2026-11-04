@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Podwatch Support</title>
+<meta name="description" content="Set up Podwatch, make a read-only Runpod API key, and fix common problems with the menu bar, popover and widget.">
+<link rel="canonical" href="https://dashing-daniel-li.github.io/podwatch-support/support.html">
+<meta name="theme-color" content="#000010">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/icon-64.png">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/icon-64.png" alt="" width="32" height="32"><span>Podwatch</span></a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="./#how">How it works</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html" aria-current="page">Support</a>
+      <a class="get" href="./#get">Get Podwatch</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="wrap narrow">
+  <div class="doc-hero">
+    <p class="eyebrow">Support</p>
+    <h1>Getting Podwatch working.</h1>
+    <p class="lede">Setup takes about a minute. If something isn't right, the answers to most problems are below. If yours isn't, email me and I'll help.</p>
+  </div>
+
+  <nav class="toc" aria-label="On this page">
+    <h2>On this page</h2>
+    <ol>
+      <li><a href="#setup">Set it up</a></li>
+      <li><a href="#api-key">Make a read-only API key</a></li>
+      <li><a href="#choose">Choose what it shows</a></li>
+      <li><a href="#widget">Add the widget</a></li>
+      <li><a href="#badge">What the badge colors mean</a></li>
+      <li><a href="#problems">Fixing problems</a></li>
+      <li><a href="#remove">Removing Podwatch</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </nav>
+
+  <article class="doc">
+    <h2 id="setup">Set it up</h2>
+    <ol class="steps">
+      <li>Open Podwatch. It runs in the menu bar, so no window opens and there's no Dock icon. Look for the chip icon at the right of the menu bar.</li>
+      <li>Click the icon. The popover asks you to connect your Runpod account.</li>
+      <li>Paste a Runpod API key and click <strong>Connect</strong>. Your pods appear within a few seconds.</li>
+    </ol>
+    <p>Want to look around first? Click <strong>Try with example pods</strong> instead. To leave the example, open settings (the gear) and click <strong>Connect my account</strong>.</p>
+
+    <h2 id="api-key">Make a read-only API key</h2>
+    <ol class="steps">
+      <li>Sign in to the <a href="https://console.runpod.io/user/settings">Runpod console</a> and open <span class="path">Settings → API Keys</span>.</li>
+      <li>Create a new key and give it <strong>read-only</strong> access. Name it something like "Podwatch" so you know what it's for.</li>
+      <li>Copy the key and paste it into Podwatch. Runpod only shows it once.</li>
+    </ol>
+    <div class="callout"><p>A read-only key lets Podwatch see your pods and balance, but it can't start, stop, create or delete anything. Podwatch never changes your account, so it never needs more.</p></div>
+    <p>To use a different key later, open settings (the gear in the popover) and click <strong>Change key</strong>.</p>
+
+    <h2 id="choose">Choose what it shows</h2>
+    <p>Open settings with the gear in the popover, or press <span class="path">⌘,</span>. Under Display, pick <strong>Menu bar</strong>, <strong>Popover</strong> or <strong>Widget</strong> and switch stats on or off. The menu bar updates as you go.</p>
+    <ul>
+      <li><strong>Click a running pod</strong> in the popover to show only that pod in the menu bar and widget. Click it again to go back to all running pods.</li>
+      <li><strong>Total spend</strong> is what your running pods have cost since they last started, added together.</li>
+      <li><strong>↗</strong> on a pod opens your pods in the Runpod console.</li>
+    </ul>
+
+    <h2 id="widget">Add the widget</h2>
+    <ol class="steps">
+      <li>Right-click your desktop and choose <strong>Edit Widgets</strong>.</li>
+      <li>Search for <strong>Podwatch</strong>, then drag the small or medium widget onto your desktop.</li>
+    </ol>
+    <p>The small widget shows your main pod, with the first stat you've chosen in large type. The medium one shows two pods. Choose its stats under Display → Widget.</p>
+
+    <h2 id="badge">What the badge colors mean</h2>
+    <ul>
+      <li><strong>Purple</strong>: pods are running; the badge shows the stats you chose.</li>
+      <li><strong>Grey "Idle"</strong>: nothing is running. It shows your balance if Account balance is on for the menu bar.</li>
+      <li><strong>Amber</strong>: your balance will run out in less than two hours at the current rate. Runpod stops pods at $0, so top up or stop something.</li>
+      <li><strong>Just an icon</strong>: no stats are chosen, or nothing is running and balance is off.</li>
+    </ul>
+
+    <h2 id="problems">Fixing problems</h2>
+    <details class="faq"><summary>It says Runpod rejected the API key</summary><div class="answer"><p>The key was deleted in the Runpod console, or it was copied with a piece missing. Make a new read-only key and paste it into the popover. Keys are long; make sure you copy all of it.</p></div></details>
+    <details class="faq"><summary>The menu bar shows a warning triangle</summary><div class="answer"><p>Podwatch couldn't reach Runpod: you might be offline, or Runpod might be having trouble. It tries again on its own, waiting a little longer each time, and goes back to every 15 seconds once it gets through. Open the popover to see the exact message.</p></div></details>
+    <details class="faq"><summary>I can't see Podwatch in the menu bar</summary><div class="answer"><p>On MacBooks with a notch, items can hide behind it when the menu bar is full. Turn off a few stats under Display → Menu bar, or quit some other menu bar apps. Pressing <span class="path">⌘</span> and dragging menu bar items rearranges them.</p></div></details>
+    <details class="faq"><summary>The widget isn't updating</summary><div class="answer"><p>The widget shows what Podwatch last fetched, so Podwatch needs to be running. A clock icon on the widget means its data is more than 15 minutes old. Open Podwatch and it catches up. Turning on Launch at login in settings keeps it running.</p></div></details>
+    <details class="faq"><summary>Total spend doesn't match my Runpod bill</summary><div class="answer"><p>Total spend covers your running pods since they last started. Your bill also includes storage, stopped pods' volumes and earlier runs.</p></div></details>
+    <details class="faq"><summary>How do I quit Podwatch?</summary><div class="answer"><p>Open the popover and press <span class="path">⌘Q</span>, or open settings and click <strong>Quit Podwatch</strong> at the bottom.</p></div></details>
+
+    <h2 id="remove">Removing Podwatch</h2>
+    <p>Quit Podwatch and drag it from Applications to the Bin. To remove your saved API key too, open Keychain Access, search for <span class="path">com.danielli.podwatch</span> and delete the entry. You can also delete the key in the Runpod console, which stops it working everywhere.</p>
+
+    <h2 id="contact">Contact</h2>
+    <div class="contact-card">
+      <p>Email me and I'll get back to you, usually within a couple of days. Say which version of macOS you're on and what you see.</p>
+      <p class="email"><a href="mailto:daniel.li.work+podwatch@gmail.com">daniel.li.work+podwatch@gmail.com</a></p>
+    </div>
+    <p class="fine" style="margin-top:22px">Podwatch is an independent app and isn't affiliated with or endorsed by Runpod. For problems with your Runpod account or pods themselves, contact Runpod.</p>
+  </article>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/icon-64.png" alt="" width="28" height="28"><span>Podwatch</span></a>
+    <ul>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a></li>
+      <li><a href="mailto:daniel.li.work+podwatch@gmail.com">Contact</a></li>
+    </ul>
+    <p class="copy"><span>© 2026 Daniel Li. Podwatch is an independent app and isn't affiliated with or endorsed by Runpod.</span><span>This site uses no cookies, no analytics and no third-party requests.</span></p>
+  </div>
+</footer>
+</body>
+</html>

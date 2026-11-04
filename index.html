@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Podwatch: Runpod Pod Stats in Your Mac Menu Bar</title>
+<meta name="description" content="Podwatch shows your Runpod pods' GPU use, cost, uptime and spend in the Mac menu bar and a desktop widget, and warns you before your balance runs out.">
+<link rel="canonical" href="https://dashing-daniel-li.github.io/podwatch-support/">
+<meta name="theme-color" content="#000010">
+<meta property="og:title" content="Podwatch for Runpod">
+<meta property="og:description" content="Your Runpod pods' GPU use, cost and uptime, right in the Mac menu bar.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dashing-daniel-li.github.io/podwatch-support/">
+<meta property="og:image" content="https://dashing-daniel-li.github.io/podwatch-support/assets/icon-512.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/icon-64.png">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<link rel="preload" href="assets/fonts/baskervville-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css?v=1">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Podwatch for Runpod",
+  "description": "A Mac menu bar app and widget that shows your Runpod pods' GPU use, cost, uptime and spend, and warns before your balance runs out.",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "macOS 14",
+  "url": "https://dashing-daniel-li.github.io/podwatch-support/",
+  "offers": {"@type": "Offer", "price": "2.99", "priceCurrency": "GBP"},
+  "author": {"@type": "Person", "name": "Daniel Li"}
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/icon-64.png" alt="" width="32" height="32"><span>Podwatch</span></a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="./#how">How it works</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Support</a>
+      <!-- Swap for the Mac App Store link once the app is approved. -->
+      <a class="get" href="./#get">Get Podwatch</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" aria-labelledby="hero-title">
+  <canvas class="hero-trace" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="live" aria-hidden="true"></span>For Runpod users on Mac</p>
+      <h1 id="hero-title">Your pods, at a glance. <em class="accent">Right in the menu bar.</em></h1>
+      <p class="lede">Podwatch shows your Runpod pods' GPU use, cost and uptime in the Mac menu bar and a desktop widget, and tells you before your balance runs out. No more keeping the console open in a tab.</p>
+      <div class="hero-cta" id="get">
+        <!-- Replace with Apple's "Download on the Mac App Store" badge and link once approved. -->
+        <span class="btn soon">Coming soon to the Mac App Store</span>
+        <a class="text-link" href="#how">See how it works <span aria-hidden="true">→</span></a>
+      </div>
+      <ul class="hero-facts" aria-label="At a glance">
+        <li>£2.99, once</li><li>Read-only key</li><li>No account</li><li>macOS 14 or later</li>
+      </ul>
+    </div>
+
+    <div class="stage">
+      <div class="desk" role="img" aria-label="The Podwatch menu bar badge reading sdxl-training +1 · $3.99 · Up 3h 12m, with the popover open below it showing two running pods, one stopped pod and the account balance.">
+        <div class="menubar"><span class="badge">sdxl-training +1 · $3.99 · Up 3h 12m</span><span class="dim">Wed 10:02</span></div>
+        <div class="pop">
+          <div class="ph"><span class="sq"></span><b>Podwatch</b><span class="t">now</span><span aria-hidden="true">⚙︎</span></div>
+          <div class="card">
+            <div class="row"><span class="dot"></span><span class="nm">sdxl-training</span><span class="gpu">RTX 4090 ↗</span></div>
+            <div class="g">GPU<i><b data-w="87" style="--w:87%"></b></i><em>87%</em></div>
+            <div class="g">VRAM<i><b data-w="71" style="--w:71%"></b></i><em>71%</em></div>
+            <div class="figs"><div>Rate<b>$0.69/hr</b></div><div>Uptime<b>3h 12m</b></div><div>Spent<b>$2.21</b></div></div>
+          </div>
+          <div class="card">
+            <div class="row"><span class="dot"></span><span class="nm">llm-inference</span><span class="gpu">A100 80GB ↗</span></div>
+            <div class="g">GPU<i><b data-w="42" style="--w:42%"></b></i><em>42%</em></div>
+            <div class="g">VRAM<i><b data-w="88" style="--w:88%"></b></i><em>88%</em></div>
+            <div class="figs"><div>Rate<b>$1.64/hr</b></div><div>Uptime<b>1h 5m</b></div><div>Spent<b>$1.78</b></div></div>
+          </div>
+          <span class="grp">Stopped</span>
+          <div class="card">
+            <div class="row"><span class="dot off"></span><span class="nm">notebook</span><span class="gpu">A40 ↗</span></div>
+            <span class="stopped">Stopped · $0.39/hr to run</span>
+          </div>
+          <div class="sum"><span>Total <b>$2.33/hr</b> · Spent <b>$3.99</b></span><span>Balance <b>$48.20</b> · ~20 h left</span></div>
+        </div>
+        <p class="example">Example pods, as in the app's demo mode.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-label="What it shows">
+  <div class="wrap">
+    <ul>
+      <li><b>GPU %</b><span>Utilization</span></li>
+      <li><b>VRAM</b><span>Memory</span></li>
+      <li><b>$/hr</b><span>Cost</span></li>
+      <li><b>3h 12m</b><span>Uptime</span></li>
+      <li><b>$3.99</b><span>Session spend</span></li>
+      <li><b>~20 h</b><span>Balance left</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="how" aria-labelledby="how-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">How it works</p>
+      <h2 id="how-title">Paste a key once. <br>Then stop checking the console.</h2>
+    </div>
+    <ol class="steps-flow">
+      <li>
+        <h3>Get Podwatch</h3>
+        <p>Download it from the Mac App Store. It lives in the menu bar, so it has no window and no Dock icon.</p>
+      </li>
+      <li>
+        <h3>Paste a read-only key</h3>
+        <p>Click Podwatch in the menu bar and paste a Runpod API key. Read-only is enough: Podwatch can see your pods, but it can't start, stop or change anything. <a href="support.html#api-key">How to make one</a>.</p>
+      </li>
+      <li>
+        <h3>Glance up</h3>
+        <p>Your pods' stats appear in the menu bar and refresh every 15 seconds. Click a running pod to show only that one, and add the widget to your desktop.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section alt" aria-labelledby="features-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">In the menu bar</p>
+      <h2 id="features-title">Know what's running. <br>Know what it's costing.</h2>
+    </div>
+    <ul class="features">
+      <li>
+        <h3>The stats you choose</h3>
+        <p>Pick what shows in the menu bar, the popover and the widget: pod name, GPU and VRAM use, cost per hour, uptime, total spend and balance.</p>
+      </li>
+      <li>
+        <h3>A warning before $0</h3>
+        <p>Runpod stops your pods when the balance runs out. When less than two hours are left at the current rate, the badge turns amber and tells you how long you have.</p>
+        <div class="chips"><span class="badge">GPU 87% · $3.99</span><span class="badge idle">Idle · $48.20</span><span class="badge low">$3.10 left · 1h 19m</span></div>
+      </li>
+      <li>
+        <h3>A widget for your desktop</h3>
+        <p>Small and medium widgets show your main pod, or two at once, with the same stats. They keep counting uptime and spend between updates.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="privacy" aria-labelledby="privacy-title">
+  <div class="wrap privacy-grid">
+    <div class="section-head" style="margin-bottom:0">
+      <p class="eyebrow">Privacy</p>
+      <h2 id="privacy-title">Your key stays on your Mac.</h2>
+      <p class="lede">Podwatch talks to Runpod and nothing else. The API key you paste in is saved in your Mac's keychain, and there's no account, no analytics and no server of ours in between.</p>
+      <div class="flow" role="img" aria-label="Podwatch on your Mac asks Runpod's API for your pod stats directly. No other server is involved.">
+        <div class="node mac"><div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4" stroke-linecap="round"/></svg></div><small>Podwatch,<br>on your Mac</small></div>
+        <div class="line"></div>
+        <div class="node"><div class="glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M7 18h10a4 4 0 0 0 .6-7.95A6 6 0 0 0 6.3 9.5 4.3 4.3 0 0 0 7 18z"/></svg></div><small>Runpod's<br>API</small></div>
+        <p class="flow-note">No server of ours in the loop</p>
+      </div>
+      <a class="text-link" href="privacy.html">Read the privacy policy <span aria-hidden="true">→</span></a>
+    </div>
+    <dl class="facts">
+      <div><dt>Your key</dt><dd>You paste it once. Podwatch saves it in your Mac's keychain, where macOS keeps your passwords. A read-only key is enough.</dd></div>
+      <div><dt>Network</dt><dd>Only api.runpod.io, about four small requests a minute.</dd></div>
+      <div><dt>Account</dt><dd>None. No sign-up, no email, no tracking.</dd></div>
+      <div><dt>Control</dt><dd>Read-only. Podwatch never starts, stops or changes a pod.</dd></div>
+      <div><dt>Sandboxed</dt><dd>Runs in Apple's app sandbox, which lets it reach the network and nothing else on your Mac.</dd></div>
+      <div><dt>Data collected</dt><dd>None. The App Store listing says "Data Not Collected".</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="section alt" id="faq" aria-labelledby="faq-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Questions</p>
+      <h2 id="faq-title">Questions people ask.</h2>
+    </div>
+    <div class="qa-list">
+      <div class="qa"><h3>Is Podwatch made by Runpod?</h3><p>No. Podwatch is an independent app and isn't affiliated with or endorsed by Runpod. It uses Runpod's public API with your own key.</p></div>
+      <div class="qa"><h3>How much does it cost?</h3><p>£2.99 once, with no subscription. Runpod doesn't charge for API requests, so checking every 15 seconds costs you nothing extra.</p></div>
+      <div class="qa"><h3>Can I try it without a Runpod account?</h3><p>Yes. Click "Try with example pods" in the popover to see the menu bar, popover and widget with example data.</p></div>
+      <div class="qa"><h3>Can it stop a pod for me?</h3><p>No, on purpose. Stopping a pod can delete data that isn't on a volume, so Podwatch stays read-only. The ↗ on each pod opens it in the Runpod console.</p></div>
+      <div class="qa"><h3>Why is "Total spend" lower than my bill?</h3><p>It's what your running pods have cost since they last started. Storage and earlier runs aren't included.</p></div>
+      <div class="qa"><h3>Something isn't working.</h3><p>See <a href="support.html">Support</a> for setup help and fixes, or email the address there.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section closing" aria-labelledby="closing-title">
+  <div class="wrap">
+    <img class="closing-icon" src="assets/icon-256.png" srcset="assets/icon-256.png 1x, assets/icon-512.png 2x" alt="" width="96" height="96" loading="lazy">
+    <h2 id="closing-title">Keep an eye on the meter.</h2>
+    <p class="lede">For anyone who's left a GPU running overnight by mistake.</p>
+    <span class="btn soon">Coming soon to the Mac App Store</span>
+    <p class="fine">Setting it up? <a href="support.html">See Support</a>.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/icon-64.png" alt="" width="28" height="28"><span>Podwatch</span></a>
+    <ul>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a></li>
+      <li><a href="mailto:daniel.li.work+podwatch@gmail.com">Contact</a></li>
+    </ul>
+    <p class="copy"><span>© 2026 Daniel Li. Podwatch is an independent app and isn't affiliated with or endorsed by Runpod.</span><span>This site uses no cookies, no analytics and no third-party requests.</span></p>
+  </div>
+</footer>
+
+<script src="assets/site.js" defer></script>
+</body>
+</html>

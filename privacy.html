@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Podwatch Privacy Policy</title>
+<meta name="description" content="Podwatch collects no data. Your Runpod API key stays in your Mac's keychain and the app talks only to Runpod's API.">
+<link rel="canonical" href="https://dashing-daniel-li.github.io/podwatch-support/privacy.html">
+<meta name="theme-color" content="#000010">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/icon-64.png">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/icon-64.png" alt="" width="32" height="32"><span>Podwatch</span></a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="./#how">How it works</a>
+      <a href="privacy.html" aria-current="page">Privacy</a>
+      <a href="support.html">Support</a>
+      <a class="get" href="./#get">Get Podwatch</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="wrap narrow">
+  <div class="doc-hero">
+    <p class="eyebrow">Privacy Policy</p>
+    <h1>Podwatch collects nothing.</h1>
+    <p class="lede">Podwatch has no account, no analytics and no server of its own. It runs on your Mac and talks only to Runpod. This page explains exactly what it handles and where that goes.</p>
+    <p class="fine">Last updated 4 November 2026.</p>
+  </div>
+
+  <article class="doc">
+    <h2 id="summary">In short</h2>
+    <ul>
+      <li>No personal data is collected, sent to me, sold or shared.</li>
+      <li>Your Runpod API key is stored in your Mac's keychain and sent only to Runpod.</li>
+      <li>There are no analytics, ads, tracking or crash reporting services in the app.</li>
+      <li>This website sets no cookies and makes no third-party requests.</li>
+    </ul>
+
+    <h2 id="key">Your Runpod API key</h2>
+    <p>You paste a Runpod API key into Podwatch to connect your account. Podwatch saves it in your Mac's keychain, the same secure store macOS uses for your passwords. It's sent only to Runpod, with each request for your pod stats, over an encrypted HTTPS connection. It never leaves your Mac for anywhere else.</p>
+    <p>A read-only key is enough, and recommended: Podwatch only reads information and never changes your account.</p>
+
+    <h2 id="runpod">What Podwatch reads from Runpod</h2>
+    <p>About every 15 seconds while it's running, and when you open the popover, Podwatch asks Runpod's API (<span class="path">api.runpod.io</span>) for:</p>
+    <ul>
+      <li>your account balance and current spend per hour</li>
+      <li>each pod's name, ID, status, GPU type and count, cost per hour, uptime, and GPU and memory use</li>
+    </ul>
+    <p>Runpod handles these requests under its own privacy policy, as it does when you use its console or API directly.</p>
+
+    <h2 id="mac">What stays on your Mac</h2>
+    <ul>
+      <li><strong>The latest pod stats</strong>, so the desktop widget can show them. They're kept in a folder shared only between Podwatch and its widget, and deleted if you remove your key.</li>
+      <li><strong>Your display choices</strong>, such as which stats show in the menu bar.</li>
+      <li><strong>Your API key</strong>, in the keychain.</li>
+    </ul>
+    <p>None of this is sent anywhere. Podwatch runs in Apple's app sandbox, which lets it reach the network and these files, and nothing else on your Mac.</p>
+
+    <h2 id="none">What Podwatch doesn't do</h2>
+    <ul>
+      <li>It has no account and asks for no name, email or other details.</li>
+      <li>It includes no analytics, advertising, tracking or crash reporting code.</li>
+      <li>It doesn't contact any server except Runpod's API.</li>
+      <li>It never starts, stops, creates or deletes pods.</li>
+    </ul>
+
+    <h2 id="apple">Apple</h2>
+    <p>When you buy and download Podwatch, Apple handles the purchase under its own privacy policy. If you've chosen to share crash reports and app analytics with developers in macOS settings, Apple may pass me anonymous crash and usage statistics. You control that in <span class="path">System Settings → Privacy &amp; Security → Analytics &amp; Improvements</span>.</p>
+
+    <h2 id="email">If you email me</h2>
+    <p>If you email for support, I'll use your email address and what you send only to reply to you, and won't share it.</p>
+
+    <h2 id="changes">Changes</h2>
+    <p>If this policy changes, the new version will be posted here with a new date. If Podwatch ever starts collecting anything, this page will say so first.</p>
+
+    <h2 id="contact">Contact</h2>
+    <div class="contact-card">
+      <p>Questions about privacy? Email Daniel Li, who makes Podwatch:</p>
+      <p class="email"><a href="mailto:daniel.li.work+podwatch@gmail.com">daniel.li.work+podwatch@gmail.com</a></p>
+    </div>
+  </article>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/icon-64.png" alt="" width="28" height="28"><span>Podwatch</span></a>
+    <ul>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a></li>
+      <li><a href="mailto:daniel.li.work+podwatch@gmail.com">Contact</a></li>
+    </ul>
+    <p class="copy"><span>© 2026 Daniel Li. Podwatch is an independent app and isn't affiliated with or endorsed by Runpod.</span><span>This site uses no cookies, no analytics and no third-party requests.</span></p>
+  </div>
+</footer>
+</body>
+</html>

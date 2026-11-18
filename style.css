@@ -96,8 +96,6 @@ p { margin: 0; text-wrap: pretty; }
 .btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 22px; border-radius: 12px; background: var(--grad); color: #fff; font-weight: 600; text-decoration: none; box-shadow: 0 10px 30px -10px rgba(93, 41, 240, 0.7); transition: transform 0.25s var(--ease-out); }
 .btn:hover { color: #fff; transform: translateY(-2px); }
 .btn svg { width: 18px; height: 18px; }
-.btn.soon { background: linear-gradient(var(--ink-2), var(--ink-2)) padding-box, var(--grad) border-box; border: 1px solid transparent; box-shadow: none; cursor: default; }
-.btn.soon:hover { transform: none; }
 .text-link { display: inline-flex; gap: 8px; color: var(--text); font-weight: 500; text-decoration: none; border-bottom: 1px solid var(--line-strong); padding-bottom: 3px; }
 .text-link:hover { color: var(--text); border-color: var(--violet); }
 

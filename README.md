@@ -10,7 +10,7 @@ https://dashing-daniel-li.github.io/podwatch-support/.
 Plain HTML and CSS with self-hosted fonts (Baskervville, SIL Open Font License, see
 `assets/fonts/OFL.txt`). No build step, no cookies, no analytics, no third-party requests.
 
-When the app is approved, replace the two "Coming soon to the Mac App Store" buttons in
-`index.html` (and the header's "Get Podwatch" link) with Apple's official badge and the App Store link.
+The "Get Podwatch" and "Get it on the Mac App Store" links in `index.html` point to the App Store:
+https://apps.apple.com/app/podwatch-for-runpod/id6830623784
 
 Podwatch is an independent app and isn't affiliated with or endorsed by Runpod.
